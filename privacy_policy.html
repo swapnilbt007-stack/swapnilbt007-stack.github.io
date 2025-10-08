@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Notepad Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: The SPA transforms the static privacy policy into a user-centric page. It starts with a high-level summary in a two-column grid, clearly distinguishing between data the app *doesn't* collect and non-personal data ad partners *do*. This immediately answers the user's primary question. The detailed legal sections are then organized into an interactive accordion, reducing initial cognitive load and allowing users to explore specific topics as needed. This structure prioritizes scannability and quick comprehension over the original document's linear format. -->
+    <!-- Visualization & Content Choices: Report Info: "We do not collect any personally identifiable information..." -> Goal: Inform/Contrast -> Presentation: Two-column card layout with icons (HTML/Tailwind) -> Interaction: Static display for clarity -> Justification: Quickly establishes trust and clarifies the app's stance. Report Info: Detailed policy sections -> Goal: Organize/Inform -> Presentation: Accordion component (HTML/JS) -> Interaction: Click to expand/collapse -> Justification: Prevents a wall of text, making details accessible without overwhelming the user. CONFIRMING NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* Adjust as needed */
+        }
+        .icon-rotate.open {
+            transform: rotate(180deg);
+        }
+    </style>
+     <link rel="preconnect" href="https://rsms.me/">
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Privacy Policy for Notepad Pro</h1>
+            <p class="text-sm text-gray-500 mt-2">Last Updated: October 8, 2025</p>
+        </header>
+
+        <section class="mb-12 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold text-center mb-4 text-gray-900">Our Privacy Promise</h2>
+            <p class="text-center text-gray-600">
+                Welcome to Notepad Pro. Your privacy is important to us. We designed our app with your privacy as a priority. This policy explains what information is involved when you use our app. By using the App, you agree to the collection and use of information in accordance with this policy.
+            </p>
+        </section>
+
+        <section class="mb-12">
+             <h2 class="text-xl font-semibold text-center mb-6 text-gray-900">Information At-a-Glance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">🚫</span>
+                        <h3 class="text-lg font-semibold text-red-800">What We Don't Collect</h3>
+                    </div>
+                    <p class="text-red-700">We do not collect any personally identifiable information from you. The App is designed to be used without requiring you to provide any personal data such as:</p>
+                    <ul class="list-none mt-4 space-y-2 text-red-700">
+                        <li class="flex items-start"><span class="font-semibold mr-2">›</span> Your Name</li>
+                        <li class="flex items-start"><span class="font-semibold mr-2">›</span> Your Email Address</li>
+                        <li class="flex items-start"><span class="font-semibold mr-2">›</span> Your Location</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-2xl mr-3">📊</span>
+                        <h3 class="text-lg font-semibold text-blue-800">Data for Advertisements</h3>
+                    </div>
+                    <p class="text-blue-700">To support the app, our third-party advertising partners may collect some non-personal information to show you relevant ads. This includes:</p>
+                     <ul class="list-none mt-4 space-y-2 text-blue-700">
+                        <li class="flex items-start"><span class="font-semibold mr-2">›</span> <strong>Device Information:</strong> Advertising ID, IP address, OS, and model.</li>
+                        <li class="flex items-start"><span class="font-semibold mr-2">›</span> <strong>Usage Data:</strong> How you interact with ads in the app.</li>
+                    </ul>
+                </div>
+            </div>
+             <p class="text-xs text-gray-500 text-center mt-4">These third-party service providers have their own privacy policies. We do not have access to or control over the information they collect.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-xl font-semibold text-center mb-6 text-gray-900">The Details</h2>
+            <div class="space-y-4" id="accordion-container">
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none">
+                        <span>How is this information used?</span>
+                        <span class="icon-rotate text-gray-500 text-xl transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-5 border-t border-gray-200 text-gray-600">
+                           The non-personal information collected by our advertising partners is used to:
+                           <ul class="list-disc pl-5 mt-2 space-y-1">
+                               <li>Provide, maintain, and improve the App.</li>
+                               <li>Serve relevant advertisements within the App.</li>
+                               <li>Monitor and analyze usage and trends to improve your experience.</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none">
+                        <span>Is this information disclosed or shared?</span>
+                        <span class="icon-rotate text-gray-500 text-xl transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                         <div class="p-5 border-t border-gray-200 text-gray-600">
+                           <p>We do not share any personal information because we do not collect it. Information may be disclosed by our third-party partners under the following circumstances:</p>
+                           <ul class="list-disc pl-5 mt-2 space-y-1">
+                               <li><strong>By Law or to Protect Rights:</strong> If required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).</li>
+                               <li><strong>Third-Party Advertising:</strong> To serve ads when you use the App. These companies may use the information they collect to provide advertisements about goods and services of interest to you.</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="bg-white border border-gray-200 rounded-lg">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none">
+                        <span>How is this information secured?</span>
+                        <span class="icon-rotate text-gray-500 text-xl transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                         <div class="p-5 border-t border-gray-200 text-gray-600">
+                           <p>We are committed to ensuring that the App is secure. However, please be aware that no method of transmission over the internet or method of electronic storage is 100% secure. While we and our partners strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold text-center mb-4 text-gray-900">Policy for Children</h2>
+            <p class="text-center text-gray-600">
+                We do not knowingly solicit information from or market to children under the age of 13. The App is intended for a general audience and is not directed at children.
+            </p>
+        </section>
+
+        <section class="mb-12 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold text-center mb-4 text-gray-900">Changes to This Privacy Policy</h2>
+            <p class="text-center text-gray-600">
+                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+            </p>
+        </section>
+
+        <footer class="text-center pt-8 border-t border-gray-200">
+             <h2 class="text-xl font-semibold mb-4 text-gray-900">Contact Us</h2>
+             <p class="text-gray-600">If you have questions or comments about this Privacy Policy, please contact us:</p>
+             <p class="font-semibold text-gray-800 mt-2">Alphavision</p>
+             <a href="mailto:swapnilbt007@gmail.com" class="text-blue-600 hover:underline">swapnilbt007@gmail.com</a>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+            accordionToggles.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.icon-rotate');
+
+                    button.setAttribute('aria-expanded', !content.classList.contains('open'));
+                    content.classList.toggle('open');
+                    icon.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
